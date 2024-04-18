@@ -18,7 +18,9 @@
         <div class="compounds-section">
           <h3>Estrogenic Compounds</h3>
           <ul>
-            <li v-for="compound in result.estrogenic_compounds" :key="compound">{{ compound }}</li>
+            <li v-for="compound in result.estrogenic_compounds" :key="compound">
+              <a :href="'https://www.google.com/search?q=' + encodeURIComponent(compound)" target="_blank">{{ compound }}</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -86,6 +88,15 @@ li {
   position: relative;
   margin-bottom: 10px;
   color: #555555;
+}
+
+li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
 }
 
 li::before {
