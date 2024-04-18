@@ -17,7 +17,7 @@
     <div class="barcode-status" :class="{ valid: isValidBarcode, invalid: !isValidBarcode && barcode.length > 0, default: !barcode.length }">
       {{ barcodeStatus }}
     </div>
-    <div class="button-container">
+    <div class="button-container" v-if="!barcodeSubmitted">
       <button @click="submitBarcode" :class="{ 'green-button': isValidBarcode }">Submit</button>
       <span class="or-text">or</span>
       <button @click="toggleScanner" :class="{ 'green-button': true}">{{ showScanner ? 'Stop' : 'Scan' }}</button>
@@ -40,6 +40,7 @@ export default {
       isBarcodeValid: false,
       isSubmitAttempted: false,
       showScanner: false,
+      barcodeSubmitted: false,
     };
   },
   methods: {
@@ -47,6 +48,7 @@ export default {
       if (this.isBarcodeValid) {
         console.log('Submitting barcode:', this.barcode);
         this.$emit('submit', this.barcode);
+        this.barcodeSubmitted = true;
       } else {
         this.isSubmitAttempted = true;
       }
