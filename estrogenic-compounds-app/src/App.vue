@@ -2,7 +2,7 @@
 <template>
   <div id="app">
     <AppTitle />
-    <BarcodeScannerForm @submit="getEstrogenicCompounds" />
+    <BarcodeScannerForm @submit="getEstrogenicCompounds" @clear="clearResults" />
     <LoadingSpinner v-if="loading" />
     <ResultDisplay v-if="result" :result="result" />
   </div>
@@ -43,7 +43,11 @@ export default {
       } finally {
         this.loading = false;
       }
-    }
+    },
+    clearResults() {
+      this.result = null;
+      this.loading = false;
+    },
   }
 };
 </script>

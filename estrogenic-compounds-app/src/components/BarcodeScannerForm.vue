@@ -36,7 +36,7 @@ import { isValidUPCA } from '../utils/barcodeValidator';
 import BarcodeScanner from './BarcodeScanner.vue';
 
 export default {
-  emits: ['submit'],
+  emits: ['submit', 'clear'],
   components: {
     BarcodeScanner,
   },
@@ -77,6 +77,7 @@ export default {
     clearBarcode() {
       this.barcode = '';
       this.barcodeSubmitted = false;
+      this.$emit('clear');
     },
   },
   watch: {
