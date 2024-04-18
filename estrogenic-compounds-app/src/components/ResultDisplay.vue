@@ -19,7 +19,7 @@
           <h3>Estrogenic Compounds</h3>
           <ul>
             <li v-for="compound in result.estrogenic_compounds" :key="compound">
-              <a :href="'https://www.google.com/search?q=' + encodeURIComponent(compound)" target="_blank">{{ compound }}</a>
+              <a :href="'https://www.google.com/search?q=' + encodeURIComponent(compound)" target="_blank" class="compound-link">{{ compound }}</a>
             </li>
           </ul>
         </div>
@@ -58,13 +58,13 @@ h2 {
   justify-content: space-between;
 }
 
-.info-section {
-  flex: 1;
-  margin-right: 30px;
-}
-
+.info-section,
 .compounds-section {
   flex: 1;
+}
+
+.info-section {
+  margin-right: 30px;
 }
 
 h3 {
@@ -90,20 +90,24 @@ li {
   color: #555555;
 }
 
-li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-li a:hover {
-  text-decoration: underline;
-}
-
 li::before {
   content: '•';
   position: absolute;
   left: -20px;
   color: #ff6b6b;
+}
+
+.compound-link {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s, font-size 0.3s;
+  display: inline-block;
+}
+
+.compound-link:hover {
+  color: #2f6ea9;
+  transform: scale(1.05);
+  font-size: 1.1em;
 }
 
 .error-message {
