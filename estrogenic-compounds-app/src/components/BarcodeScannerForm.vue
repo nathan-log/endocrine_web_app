@@ -12,15 +12,21 @@
       }"
       @animationend="resetShake"
       @keyup.enter="submitBarcode"
+      :disabled="barcodeSubmitted"
       autofocus
     />
     <div class="barcode-status" :class="{ valid: isValidBarcode, invalid: !isValidBarcode && barcode.length > 0, default: !barcode.length }">
       {{ barcodeStatus }}
     </div>
-    <div class="button-container" v-if="!barcodeSubmitted">
-      <button @click="submitBarcode" :class="{ 'green-button': isValidBarcode }">Submit</button>
-      <span class="or-text">or</span>
-      <button @click="toggleScanner" :class="{ 'green-button': true}">{{ showScanner ? 'Stop' : 'Scan' }}</button>
+    <div class="button-container">
+      <template v-if="!barcodeSubmitted">
+        <button @click="submitBarcode" :class="{ 'green-button': isValidBarcode }">Submit</button>
+        <span class="or-text">or</span>
+        <button @click="toggleScanner" :class="{ 'green-button': true}">{{ showScanner ? 'Stop' : 'Scan' }}</button>
+      </template>
+      <template v-else>
+        <button @click="clearBarcode" class="clear-button">Clear</button>
+      </template>
     </div>
   </div>
 </template>
@@ -67,6 +73,10 @@ export default {
           this.submitBarcode();
         }
       });
+    },
+    clearBarcode() {
+      this.barcode = '';
+      this.barcodeSubmitted = false;
     },
   },
   watch: {
