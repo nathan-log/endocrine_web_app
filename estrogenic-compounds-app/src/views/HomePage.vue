@@ -14,6 +14,7 @@
   import ResultDisplay from '@/components/ResultDisplay.vue';
   import LoadingSpinner from '@/components/LoadingSpinner.vue';
   import axios from 'axios';
+  import config from '@/config';
   
   export default {
     components: {
@@ -32,7 +33,7 @@
       async getEstrogenicCompounds(barcode) {
         try {
           this.loading = true;
-          const response = await axios.get('http://127.0.0.1:8000/estrogenic-compounds-details', {
+          const response = await axios.get(`${config.baseURL}/estrogenic-compounds-details`, {
             params: {
               barcode: barcode
             }

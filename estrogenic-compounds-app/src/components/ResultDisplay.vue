@@ -19,8 +19,9 @@
           <h3>Estrogenic Compounds</h3>
           <ul>
             <li v-for="compound in result.estrogenic_compounds" :key="compound">
-              <a :href="'https://www.google.com/search?q=' + encodeURIComponent(compound)" target="_blank" class="compound-link">{{ compound }}</a>
+              <a @click="goToCompoundInfo(compound)" class="compound-link">{{ compound }}</a>
             </li>
+
           </ul>
         </div>
       </div>
@@ -33,7 +34,12 @@
 
 <script>
 export default {
-  props: ['result']
+  props: ['result'],
+  methods: {
+    goToCompoundInfo(compoundName) {
+      this.$router.push({ name: 'CompoundInfoPage', params: { compoundName } });
+    }
+  }
 };
 </script>
 
