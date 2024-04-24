@@ -108,6 +108,7 @@ li::before {
   text-decoration: none;
   transition: color 0.3s, transform 0.3s, font-size 0.3s;
   display: inline-block;
+  cursor: pointer;
 }
 
 .compound-link:hover {

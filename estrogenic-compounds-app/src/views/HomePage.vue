@@ -1,4 +1,4 @@
-<!-- src/views/Home.vue -->
+<!-- src/views/HomePage.vue -->
 <template>
     <div class="home">
       <AppTitle />
@@ -17,6 +17,7 @@
   import config from '@/config';
   
   export default {
+    name: 'HomePage',
     components: {
       AppTitle,
       BarcodeScannerForm,
