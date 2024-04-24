@@ -1,5 +1,4 @@
 <!-- src/views/CompoundInfoPage.vue -->
-<!-- src/views/CompoundInfoPage.vue -->
 <template>
   <div class="compound-info-page">
     <button class="back-button" @click="goBack">&#8592; Back</button>
