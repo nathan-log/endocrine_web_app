@@ -1,15 +1,13 @@
 <!-- src/views/HomePage.vue -->
 <template>
-    <div class="home">
-      <AppTitle />
-      <BarcodeScannerForm @submit="getEstrogenicCompounds" @clear="clearResults" />
-      <LoadingSpinner v-if="loading" />
-      <ResultDisplay v-if="result" :result="result" />
-    </div>
-  </template>
+  <div class="home">
+    <BarcodeScannerForm @submit="getEstrogenicCompounds" @clear="clearResults" />
+    <LoadingSpinner v-if="loading" />
+    <ResultDisplay v-if="result" :result="result" />
+  </div>
+</template>
   
   <script>
-  import AppTitle from '@/components/AppTitle.vue';
   import BarcodeScannerForm from '@/components/BarcodeScannerForm.vue';
   import ResultDisplay from '@/components/ResultDisplay.vue';
   import LoadingSpinner from '@/components/LoadingSpinner.vue';
@@ -19,7 +17,6 @@
   export default {
     name: 'HomePage',
     components: {
-      AppTitle,
       BarcodeScannerForm,
       ResultDisplay,
       LoadingSpinner

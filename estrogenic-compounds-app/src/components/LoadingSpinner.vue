@@ -1,4 +1,4 @@
-<!-- LoadingSpinner.vue -->
+<!-- src/components/LoadingSpinner.vue -->
 <template>
     <div class="loading-spinner">
       <v-progress-circular indeterminate size="64"></v-progress-circular>
