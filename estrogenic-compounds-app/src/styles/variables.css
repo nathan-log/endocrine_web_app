@@ -1,6 +1,7 @@
 :root {
     /* Text Colors */
     --text-color-dark: #333333;
+    --text-color-medium: #555555;
     --text-color-light: #777777;
   
     /* Button Colors */
@@ -30,4 +31,7 @@
     --spacing-small: 10px;
     --spacing-medium: 20px;
     --spacing-large: 30px;
+
+    --spinner-size: 64px;
+    --spinner-container-height: 200px;
   }

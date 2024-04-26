@@ -20,46 +20,47 @@ export default {
 };
 </script>
 
-
 <style scoped>
+@import '@/styles/variables.css';
+
 .compound-info {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: var(--spacing-medium);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: var(--font-size-large);
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
   text-align: center;
 }
 
 .info-container {
   background-color: #ffffff;
-  padding: 30px;
+  padding: var(--spacing-large);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .info-section {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-medium);
 }
 
 h3 {
-  font-size: 20px;
+  font-size: var(--font-size-large-alt);
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #555555;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color-medium);
 }
 
 p {
-  margin-bottom: 10px;
-  color: #777777;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color-light);
 }
 
 a {
-  color: #4a90e2;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -68,7 +69,7 @@ a:hover {
 }
 
 .loading-message {
-  color: #777777;
+  color: var(--text-color-light);
   font-weight: bold;
   text-align: center;
 }

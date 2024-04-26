@@ -38,7 +38,9 @@
   </script>
   
   <style scoped>
-  .barcode-scanner {
-    margin-bottom: 20px;
-  }
+    @import '@/styles/variables.css';
+
+    .barcode-scanner {
+      margin-bottom: var(--spacing-medium);
+    }
   </style>
