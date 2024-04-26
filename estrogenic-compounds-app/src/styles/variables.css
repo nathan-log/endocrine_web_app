@@ -1,0 +1,32 @@
+:root {
+    /* Text Colors */
+    --text-color-dark: #333333;
+    --text-color-light: #777777;
+  
+    /* Button Colors */
+    --button-color-green: #00ff00;
+    --button-color-gray: #a0a0a0;
+    --button-hover-glow-color: #ffd700;
+  
+    /* Link Colors */
+    --link-color: #4a90e2;
+    --link-hover-color: #2f6ea9;
+  
+    /* Status Colors */
+    --success-color: #00ff00;
+    --error-color: #ff0000;
+    --warning-color: #ff6b6b;
+  
+    /* Fonts */
+    --font-family-primary: 'Arial', sans-serif;
+    --font-family-secondary: 'Arial Black', sans-serif;
+    --font-size-small: 12px;
+    --font-size-medium: 16px;
+    --font-size-large: 24px;
+    --font-size-xlarge: 64px;
+  
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+  }

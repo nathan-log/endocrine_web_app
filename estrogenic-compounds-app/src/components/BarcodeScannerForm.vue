@@ -133,24 +133,24 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: var(--spacing-large);
 }
 
 input {
   width: 600px;
   height: 100px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: var(--spacing-medium);
+  border: 1px solid var(--button-color-gray);
   border-radius: 4px;
-  font-size: 64px;
-  font-family: 'Arial', sans-serif;
+  font-size: var(--font-size-xlarge);
+  font-family: var(--font-family-primary);
   text-align: center;
   outline: none;
   transition: box-shadow 0.3s ease;
 }
 
 input::placeholder {
-  color: #a0a0a0;
+  color: var(--button-color-gray);
   font-weight: normal;
 }
 
@@ -159,59 +159,59 @@ input:focus {
 }
 
 input.complete {
-  box-shadow: 0 0 0 3px #00ff00;
+  box-shadow: 0 0 0 3px var(--success-color);
 }
 
 input.incomplete {
-  box-shadow: 0 0 0 3px #ff0000;
+  box-shadow: 0 0 0 3px var(--error-color);
 }
 
 .barcode-status {
-  margin-top: 10px;
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-primary);
 }
 
 .barcode-status.valid {
-  color: #00ff00;
+  color: var(--success-color);
 }
 
 .barcode-status.invalid {
-  color: #ff0000;
+  color: var(--error-color);
 }
 
 .barcode-status.default {
-  color: #a0a0a0;
+  color: var(--button-color-gray);
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: var(--spacing-large);
 }
 
 button {
   width: 200px;
-  padding: 10px 40px;
-  background-color: #a0a0a0;
+  padding: var(--spacing-small) var(--spacing-large);
+  background-color: var(--button-color-gray);
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 28px;
-  font-family: 'Arial Black', sans-serif;
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-secondary);
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  box-shadow: 0 0 20px #ffd700;
+  box-shadow: 0 0 20px var(--button-hover-glow-color);
 }
 
 .or-text {
-  margin: 20px 0;
-  font-size: 24px;
-  font-family: 'Arial', sans-serif;
+  margin: var(--spacing-medium) 0;
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-primary);
 }
 
 .shake {
@@ -240,10 +240,10 @@ button:hover {
 }
 
 button.glow {
-  box-shadow: 0 0 20px #ffd700;
+  box-shadow: 0 0 20px var(--button-hover-glow-color);
 }
 
 .green-button {
-  background-color: #00ff00;
+  background-color: var(--success-color);
 }
 </style>
