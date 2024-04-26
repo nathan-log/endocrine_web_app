@@ -44,20 +44,22 @@ export default {
 </script>
 
 <style scoped>
+@import '@/styles/variables.css';
+
 .result-display {
-  margin-top: 30px;
+  margin-top: var(--spacing-large);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: var(--font-size-large);
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
   text-align: center;
 }
 
 .analysis-container {
   background-color: #ffffff;
-  padding: 30px;
+  padding: var(--spacing-large);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -70,41 +72,41 @@ h2 {
 }
 
 .info-section {
-  margin-right: 30px;
+  margin-right: var(--spacing-large);
 }
 
 h3 {
-  font-size: 20px;
+  font-size: var(--font-size-large-alt);
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #555555;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color-dark);
 }
 
 p {
-  margin-bottom: 10px;
-  color: #777777;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color-light);
 }
 
 ul {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: var(--spacing-medium);
 }
 
 li {
   position: relative;
-  margin-bottom: 10px;
-  color: #555555;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color-dark);
 }
 
 li::before {
   content: '•';
   position: absolute;
-  left: -20px;
-  color: #ff6b6b;
+  left: calc(-1 * var(--spacing-medium));
+  color: var(--warning-color);
 }
 
 .compound-link {
-  color: #4a90e2;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s, transform 0.3s, font-size 0.3s;
   display: inline-block;
@@ -112,21 +114,21 @@ li::before {
 }
 
 .compound-link:hover {
-  color: #2f6ea9;
+  color: var(--link-hover-color);
   transform: scale(1.05);
   font-size: 1.1em;
 }
 
 .error-message {
-  color: #ff4d4d;
+  color: var(--error-color);
   font-weight: bold;
 }
 
 .green {
-  color: green;
+  color: var(--success-color);
 }
 
 .red {
-  color: red;
+  color: var(--error-color);
 }
 </style>
