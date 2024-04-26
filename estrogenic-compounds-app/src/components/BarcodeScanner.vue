@@ -1,4 +1,4 @@
-<!-- BarcodeScanner.vue -->
+<!-- src/components/BarcodeScanner.vue -->
 <template>
     <div class="barcode-scanner">
       <StreamBarcodeReader

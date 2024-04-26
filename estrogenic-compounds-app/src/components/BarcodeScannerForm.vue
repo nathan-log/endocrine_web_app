@@ -1,4 +1,4 @@
-<!-- BarcodeScannerForm.vue -->
+<!-- src/components/BarcodeScannerForm.vue -->
 <template>
   <div class="barcode-scanner-form">
     <BarcodeScanner v-if="showScanner" @barcode-scanned="onBarcodeScanned" />

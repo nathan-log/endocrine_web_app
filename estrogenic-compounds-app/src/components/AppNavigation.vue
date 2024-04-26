@@ -1,3 +1,4 @@
+<!-- src/components/AppNavigation.vue -->
 <template>
   <nav>
     <ul>

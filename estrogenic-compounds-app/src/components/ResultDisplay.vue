@@ -1,4 +1,4 @@
-<!-- ResultDisplay.vue -->
+<!-- src/components/ResultDisplay.vue -->
 <template>
   <div class="result-display">
     <div v-if="result.status === 'success'">
